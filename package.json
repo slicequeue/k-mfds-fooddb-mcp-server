@@ -1,9 +1,12 @@
 {
   "name": "k-mfds-fooddb-mcp-server",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/index",
+    "dev": "npm run build && npm run start"
   },
   "keywords": [],
   "author": "",
