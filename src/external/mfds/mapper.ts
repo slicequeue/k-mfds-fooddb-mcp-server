@@ -71,7 +71,7 @@ export function toFoodNutrition(apiResponseBodyArrayItem: Record<string, any>): 
     creationMethodCode: apiResponseBodyArrayItem.CRT_MTH_CD,
     creationMethodName: apiResponseBodyArrayItem.CRT_MTH_NM,
     researchDate: apiResponseBodyArrayItem.RESEARCH_YMD,
-    updateDate: apiResponseBodyArrayItem.UPDATE_YMD,
+    updateDate: apiResponseBodyArrayItem.UPDATE_DATE,
     nutritionComponents: toNutritionComponent(apiResponseBodyArrayItem),
   });
 }

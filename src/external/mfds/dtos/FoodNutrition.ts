@@ -102,7 +102,7 @@ export class FoodNutrition {
   creationMethodName: string;
   /** 데이터생성일자 RESEARCH_YMD */
   researchDate: string;
-  /** 데이터기준일자 UPDATE_YMD */
+  /** 데이터기준일자 UPDATE_DATE */
   updateDate: string;
   /** 영양소 성분 리스트 */
   nutritionComponents: NutritionComponent[];
