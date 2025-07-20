@@ -7,6 +7,7 @@
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"],
@@ -14,5 +15,8 @@
       "@/external/*": ["external/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "ts-node": {
+    "esm": true
+  }
 }
