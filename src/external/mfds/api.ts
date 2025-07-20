@@ -1,5 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import { extractBodyFromResponse } from './util';
+import { config } from '../../config';
 
 const DataType = {
   XML: 'xml',
@@ -13,7 +14,7 @@ const API_URL = 'http://apis.data.go.kr/1471000/FoodNtrCpntDbInfo02';
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: API_URL,
   params: {
-    serviceKey: process.env.GOV_API_KEY || '',
+    serviceKey: config.govApi.key,
     type: DataType.JSON,
   }
 });
