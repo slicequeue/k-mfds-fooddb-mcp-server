@@ -8,12 +8,7 @@
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["*"],
-      "@/config/*": ["config/*"],
-      "@/external/*": ["external/*"]
-    }
+    "baseUrl": "./src"
   },
   "include": ["src"],
   "ts-node": {

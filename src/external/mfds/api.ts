@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import { extractBodyFromResponse } from './util';
-import { config } from '@/config';
+import { config } from '../../config';
 
 const DataType = {
   XML: 'xml',
