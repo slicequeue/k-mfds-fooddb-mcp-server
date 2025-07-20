@@ -20,6 +20,13 @@ export async function searchFoodNutritionInfo(searchFoodNutritionRequest: Search
     searchFoodNutritionRequest.foodNameKr,
     searchFoodNutritionRequest.researchYearMonthDate,
     searchFoodNutritionRequest.makerName,
+    searchFoodNutritionRequest.pageNo,
+    searchFoodNutritionRequest.numOfRows,
+    searchFoodNutritionRequest.type,
+    searchFoodNutritionRequest.foodCategory1Name,
+    searchFoodNutritionRequest.itemReportNo,
+    searchFoodNutritionRequest.updateDate,
+    searchFoodNutritionRequest.dbClassName,
   );
 
   const foodNutritions = extractItemArrayOrDefualtEmptyArrayFromBody(body)

@@ -20,20 +20,30 @@ const axiosInstance: AxiosInstance = axios.create({
 });
 
 export interface FoodNutritionApiParams {
-  foodNameKr: string;
-  researchYearMonthDate: string;
-  makerName: string;
+  foodNameKr?: string;
+  researchYearMonthDate?: string;
+  makerName?: string;
   pageNo?: number;
   numOfRows?: number;
+  type?: 'xml' | 'json';
+  foodCategory1Name?: string;
+  itemReportNo?: string;
+  updateDate?: string;
+  dbClassName?: string;
 }
 
 // 영양 성분 조회
 export async function getFoodNutritionComponentDatabaseInquery(
-  foodNameKr: string, 
-  researchYearMonthDate: string, 
-  makerName: string,
+  foodNameKr: string = '', 
+  researchYearMonthDate: string = '', 
+  makerName: string = '',
   pageNo: number = 1, 
   numOfRows: number = 10,
+  type: 'xml' | 'json' = 'json',
+  foodCategory1Name: string = '',
+  itemReportNo: string = '',
+  updateDate: string = '',
+  dbClassName: string = '',
 ): Promise<any> {
   const res = await axiosInstance.get('/getFoodNtrCpntDbInq02', {
     params: {
@@ -42,6 +52,11 @@ export async function getFoodNutritionComponentDatabaseInquery(
       MAKER_NM: makerName,
       pageNo,
       numOfRows,
+      type,
+      FOOD_CAT1_NM: foodCategory1Name,
+      ITEM_REPORT_NO: itemReportNo,
+      UPDATE_DATE: updateDate,
+      DB_CLASS_NM: dbClassName,
     }
   }); // 응답 형태 주소: https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15127578#/API%20%EB%AA%A9%EB%A1%9D/getFoodNtrCpntDbInq02
   return extractBodyFromResponse(res);
