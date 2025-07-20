@@ -28,7 +28,7 @@ export class AmtCodeTypeResponse {
   static AmtCodeTypeItem = AmtCodeTypeItem;
 
   /** AmtCodeTypeItem 리스트 */
-  private _items: AmtCodeTypeItem[];
+  private _items: AmtCodeTypeItem[] = [];
 
   constructor(amtCodeTypes: AmtCodeTypeItem[]) {
     this.items = amtCodeTypes;
