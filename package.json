@@ -2,10 +2,11 @@
   "name": "k-mfds-fooddb-mcp-server",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index",
+    "build": "tsup src/index.ts --format esm --target node18 --outDir dist --external @modelcontextprotocol/sdk",
+    "build:prod": "tsup src/index.ts --format esm --target node18 --outDir dist --external @modelcontextprotocol/sdk --minify",
+    "start": "node dist/index.js",
     "dev": "npm run build && npm run start",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -25,8 +26,10 @@
     "@types/dotenv": "^8.2.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^24.0.15",
+    "esbuild": "^0.20.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.2",
+    "tsup": "^8.0.0",
     "typescript": "^5.8.3"
   }
 }

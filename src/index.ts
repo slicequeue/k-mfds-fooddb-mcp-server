@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { tools } from "./tools/index.js";
+import { tools } from "./tools/index";
 
 // MCP 서버 생성
 const server = new McpServer({
