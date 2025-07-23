@@ -13,12 +13,12 @@ export const foodSearchTool = {
     researchYearMonthDate: z.string().optional().describe('데이터 생성일자 (YYYYMMDD 형식)'),
     pageNo: z.number().optional().describe('페이지 번호 (기본값: 1)'),
     numOfRows: z.number().optional().describe('한 페이지 결과수 (기본값: 10, 최대: 100)'),
-    type: z.enum(['xml', 'json']).optional().describe('응답 데이터 형식 (기본값: json)'),
     updateDate: z.string().optional().describe('데이터 수정일자 (YYYYMMDD 형식)'),
     dbClassName: z.string().optional().describe('품목대표/상용제품 구분')
   },
   handler: async (params: any) => {
     try {
+      console.error('[foodSearchTool.handler()] called with params:', params);
       // 최소한 하나의 검색 조건이 있는지 확인
       const hasSearchCriteria = params.foodNameKr || params.makerName || params.foodCategory1Name || params.itemReportNo;
       if (!hasSearchCriteria) {
