@@ -10,12 +10,16 @@
     "dev": "npm run build && npm run start",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run build:prod"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "식품의약품안전처 식품영양성분DB를 MCP 도구로 제공합니다.",
+  "bin": {
+    "k-mfds-fooddb-mcp-server": "./dist/index.js"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.16.0",
     "axios": "^1.10.0",
