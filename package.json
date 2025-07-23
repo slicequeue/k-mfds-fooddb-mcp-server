@@ -3,6 +3,31 @@
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slicequeue/k-mfds-fooddb-mcp-server.git"
+  },
+  "homepage": "https://github.com/slicequeue/k-mfds-fooddb-mcp-server#readme",
+  "bugs": {
+    "url": "https://github.com/slicequeue/k-mfds-fooddb-mcp-server/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "food",
+    "nutrition",
+    "korea",
+    "mfds",
+    "식품의약품안전처",
+    "식품영양성분",
+    "한국"
+  ],
+  "author": "slicequeue",
+  "license": "ISC",
+  "description": "식품의약품안전처 식품영양성분DB를 MCP 도구로 제공합니다.",
+  "bin": {
+    "k-mfds-fooddb-mcp-server": "./dist/index.js"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format esm --target node18 --outDir dist --external @modelcontextprotocol/sdk",
     "build:prod": "tsup src/index.ts --format esm --target node18 --outDir dist --external @modelcontextprotocol/sdk --minify",
@@ -12,13 +37,6 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "prepublishOnly": "npm run build:prod"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "식품의약품안전처 식품영양성분DB를 MCP 도구로 제공합니다.",
-  "bin": {
-    "k-mfds-fooddb-mcp-server": "./dist/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.16.0",

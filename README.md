@@ -2,6 +2,9 @@
 
 > **식품의약품안전처(K-MFDS) 식품영양성분DB를 MCP(Model Context Protocol) 도구로 바로 활용!**
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)](https://github.com/slicequeue/k-mfds-fooddb-mcp-server)
+[![npm](https://img.shields.io/badge/npm-package-green?style=flat-square&logo=npm)](https://www.npmjs.com/package/k-mfds-fooddb-mcp-server)
+
 ---
 
 ## ✨ 빠른 시작 (npx)
@@ -12,6 +15,71 @@ npx k-mfds-fooddb-mcp-server
 
 - MCP 호환 플랫폼(예: ModelContext, MCP SDK 등)에서 바로 실행할 수 있습니다.
 - 표준 입력/출력(STDIO) 기반 MCP 서버로 동작합니다.
+
+---
+
+## 🚀 MCP 클라이언트 설정
+
+### Gemini (Google AI Studio)
+
+1. **Google AI Studio**에서 새 프로젝트 생성
+2. **Tools** 섹션에서 **Add tool** 클릭
+3. **MCP Server** 선택
+4. 설정:
+   ```
+   Name: K-MFDS FoodDB
+   Command: npx k-mfds-fooddb-mcp-server
+   ```
+5. **Save** 클릭
+
+### Cursor
+
+1. **Cursor** 설정에서 **Extensions** → **MCP** 활성화
+2. `~/.cursor/mcp_servers.json` 파일 생성/수정:
+   ```json
+   {
+     "mcpServers": {
+       "k-mfds-fooddb": {
+         "command": "npx",
+         "args": ["k-mfds-fooddb-mcp-server"]
+       }
+     }
+   }
+   ```
+3. Cursor 재시작
+
+### Continue
+
+1. **Continue** 설정에서 **MCP Servers** 섹션으로 이동
+2. 새 서버 추가:
+   ```
+   Name: k-mfds-fooddb
+   Command: npx k-mfds-fooddb-mcp-server
+   ```
+3. **Save** 클릭
+
+### ModelContext
+
+1. **ModelContext** 설정에서 **MCP Servers** 탭
+2. **Add Server** 클릭
+3. 설정:
+   ```
+   Name: K-MFDS FoodDB
+   Command: npx k-mfds-fooddb-mcp-server
+   ```
+4. **Connect** 클릭
+
+### 기타 MCP 호환 클라이언트
+
+대부분의 MCP 호환 클라이언트에서 다음과 같이 설정:
+
+```json
+{
+  "name": "k-mfds-fooddb",
+  "command": "npx",
+  "args": ["k-mfds-fooddb-mcp-server"]
+}
+```
 
 ---
 
@@ -112,6 +180,7 @@ GOV_API_KEY=발급받은_식약처_API_키
 ```bash
 npx k-mfds-fooddb-mcp-server
 ```
+
 - MCP 플랫폼에서 자동으로 도구를 인식/등록합니다.
 - STDIO 기반이므로, MCP SDK/ModelContext 등에서 바로 연결해 사용할 수 있습니다.
 
@@ -141,6 +210,7 @@ npm test
 
 - Pull Request/이슈 환영합니다!
 - 문의: [GitHub Issues](https://github.com/slicequeue/k-mfds-fooddb-mcp-server/issues)
+- 저장소: [GitHub Repository](https://github.com/slicequeue/k-mfds-fooddb-mcp-server)
 
 ---
 
