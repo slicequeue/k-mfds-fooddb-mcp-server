@@ -1,6 +1,6 @@
-import { getFoodNutritionComponentDatabaseInquery } from '../../external/mfds/api';
-import { searchFoodNutritionInfo } from '../../external/mfds/service';
-import { SearchFoodNutritionRequest } from '../../external/mfds/dtos/SearchFoodNutritionRequest';
+import { getFoodNutritionComponentDatabaseInquery } from '../src/external/mfds/api';
+import { searchFoodNutritionInfo } from '../src/external/mfds/service';
+import { SearchFoodNutritionRequest } from '../src/external/mfds/dtos/SearchFoodNutritionRequest';
 
 describe('MFDS API E2E 테스트 (실제 API 호출)', () => {
   it('getFoodNutritionComponentDatabaseInquery - 기본 검색 (우유)', async () => {
