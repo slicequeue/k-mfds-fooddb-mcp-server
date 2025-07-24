@@ -5,6 +5,13 @@
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)](https://github.com/slicequeue/k-mfds-fooddb-mcp-server)
 [![npm](https://img.shields.io/badge/npm-package-green?style=flat-square&logo=npm)](https://www.npmjs.com/package/k-mfds-fooddb-mcp-server)
 
+## 실행 화면
+
+|예시1|예시2|
+|---|---|
+|<img width="800" alt="image" src="https://github.com/user-attachments/assets/2781d2d6-2566-4ddb-8afb-64d2dea86816" />|<img width="800" alt="image" src="https://github.com/user-attachments/assets/4b2baa3a-523e-49be-a916-ebe8cd01264e" /><img width="800" alt="image" src="https://github.com/user-attachments/assets/39719b71-f2de-44b9-9b50-a6e5dba4da6f" />|
+
+
 ---
 
 ## ✨ 빠른 시작 (npx)
