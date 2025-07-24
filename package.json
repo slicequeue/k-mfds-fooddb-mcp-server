@@ -1,6 +1,6 @@
 {
   "name": "k-mfds-fooddb-mcp-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "dist/index.js",
   "repository": {
@@ -29,8 +29,10 @@
     "k-mfds-fooddb-mcp-server": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm --target node18 --outDir dist --external @modelcontextprotocol/sdk",
-    "build:prod": "tsup src/index.ts --format esm --target node18 --outDir dist --external @modelcontextprotocol/sdk --minify",
+    "build": "tsup src/index.ts --format esm --target node18 --outDir dist --external @modelcontextprotocol/sdk --shims",
+    "build:prod": "tsup src/index.ts --format esm --target node18 --outDir dist --external @modelcontextprotocol/sdk --minify --shims",
+    "postbuild": "echo '#!/usr/bin/env node' | cat - dist/index.js > temp && mv temp dist/index.js && chmod +x dist/index.js",
+    "postbuild:prod": "echo '#!/usr/bin/env node' | cat - dist/index.js > temp && mv temp dist/index.js && chmod +x dist/index.js",
     "start": "node dist/index.js",
     "dev": "npm run build && npm run start",
     "test": "jest",
