@@ -41,33 +41,50 @@ npx k-mfds-fooddb-mcp-server
      "mcpServers": {
        "k-mfds-fooddb": {
          "command": "npx",
-         "args": ["k-mfds-fooddb-mcp-server"]
+         "args": ["k-mfds-fooddb-mcp-server"],
+         "env": {
+           "GOV_API_KEY": "발급받은_식약처_API_키"
+         }
        }
      }
    }
    ```
 3. Cursor 재시작
 
+> 💡 **환경변수 설정**: `env` 섹션에 `GOV_API_KEY`를 추가하세요. API 키는 [공공데이터포털](https://www.data.go.kr/data/15000161/openapi.do)에서 발급받을 수 있습니다.
+
 ### Continue
 
 1. **Continue** 설정에서 **MCP Servers** 섹션으로 이동
 2. 새 서버 추가:
-   ```
+   ```yaml
    Name: k-mfds-fooddb
    Command: npx k-mfds-fooddb-mcp-server
+   Environment Variables:
+     GOV_API_KEY: 발급받은_식약처_API_키
    ```
 3. **Save** 클릭
+
+> 💡 **환경변수 설정**: Environment Variables 섹션에 `GOV_API_KEY`를 추가하세요.
 
 ### ModelContext
 
 1. **ModelContext** 설정에서 **MCP Servers** 탭
 2. **Add Server** 클릭
 3. 설정:
-   ```
-   Name: K-MFDS FoodDB
-   Command: npx k-mfds-fooddb-mcp-server
+   ```json
+   {
+     "name": "K-MFDS FoodDB",
+     "command": "npx",
+     "args": ["k-mfds-fooddb-mcp-server"],
+     "env": {
+       "GOV_API_KEY": "발급받은_식약처_API_키"
+     }
+   }
    ```
 4. **Connect** 클릭
+
+> 💡 **환경변수 설정**: `env` 섹션에 `GOV_API_KEY`를 추가하세요.
 
 ### 기타 MCP 호환 클라이언트
 
@@ -77,9 +94,14 @@ npx k-mfds-fooddb-mcp-server
 {
   "name": "k-mfds-fooddb",
   "command": "npx",
-  "args": ["k-mfds-fooddb-mcp-server"]
+  "args": ["k-mfds-fooddb-mcp-server"],
+  "env": {
+    "GOV_API_KEY": "발급받은_식약처_API_키"
+  }
 }
 ```
+
+> 💡 **환경변수 설정**: `env` 섹션에 `GOV_API_KEY`를 추가하세요. API 키는 [공공데이터포털](https://www.data.go.kr/data/15000161/openapi.do)에서 발급받을 수 있습니다.
 
 ---
 
@@ -110,6 +132,7 @@ GOV_API_KEY=발급받은_식약처_API_키
 ## 🛠️ 사용 가능한 MCP 도구
 
 ### 1. 식품 검색 도구 (`searchFoodNutrition`)
+
 - **설명**: 식품명, 제조사, 카테고리 등 다양한 조건으로 식품 영양성분 정보를 검색합니다.
 - **입력 파라미터**:
   - `foodNameKr`: 식품명 (예: "사과")
@@ -123,6 +146,7 @@ GOV_API_KEY=발급받은_식약처_API_키
   - `dbClassName`: 품목대표/상용제품 구분
 
 #### ✅ 예시 요청
+
 ```json
 {
   "foodNameKr": "사과",
@@ -131,6 +155,7 @@ GOV_API_KEY=발급받은_식약처_API_키
 ```
 
 #### ✅ 예시 응답
+
 ```json
 {
   "data": [
@@ -158,14 +183,21 @@ GOV_API_KEY=발급받은_식약처_API_키
 ---
 
 ### 2. 영양성분 코드 조회 도구 (`getNutritionComponentTypes`)
+
 - **설명**: 식품영양성분DB에서 제공하는 영양성분 코드/이름/단위 목록을 조회합니다.
 - **입력 파라미터**: 없음
 
 #### ✅ 예시 응답
+
 ```json
 {
   "items": [
-    { "code": "AMT_NUM1", "name": "에너지", "label": "에너지(kcal)", "unit": "kcal" },
+    {
+      "code": "AMT_NUM1",
+      "name": "에너지",
+      "label": "에너지(kcal)",
+      "unit": "kcal"
+    },
     { "code": "AMT_NUM2", "name": "수분", "label": "수분(g)", "unit": "g" },
     { "code": "AMT_NUM3", "name": "단백질", "label": "단백질(g)", "unit": "g" }
     // ... 이하 생략
@@ -216,4 +248,4 @@ npm test
 
 ## 📄 라이선스
 
-ISC 
+ISC
