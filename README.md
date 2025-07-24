@@ -7,10 +7,15 @@
 
 ## 실행 화면
 
-|예시1|예시2|
-|---|---|
-|<img width="800" alt="image" src="https://github.com/user-attachments/assets/2781d2d6-2566-4ddb-8afb-64d2dea86816" />|<img width="800" alt="image" src="https://github.com/user-attachments/assets/4b2baa3a-523e-49be-a916-ebe8cd01264e" /><img width="800" alt="image" src="https://github.com/user-attachments/assets/39719b71-f2de-44b9-9b50-a6e5dba4da6f" />|
+|예시1 일반 검색|
+|---|
+|<img width="800" alt="image" src="https://github.com/user-attachments/assets/2781d2d6-2566-4ddb-8afb-64d2dea86816" />|
 
+|예시2 응용 검색|
+|---|
+|<img width="800" alt="image" src="https://github.com/user-attachments/assets/4b2baa3a-523e-49be-a916-ebe8cd01264e" /><img width="800" alt="image" src="https://github.com/user-attachments/assets/39719b71-f2de-44b9-9b50-a6e5dba4da6f" />|
+
+**사용방법은 아래 `🛠️ 사용 가능한 MCP 도구`를 참고해주세요 :)**
 
 ---
 
