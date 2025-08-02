@@ -14,7 +14,6 @@ export async function searchFoodNutritionInfo(searchFoodNutritionRequest: Search
   if (!(searchFoodNutritionRequest instanceof SearchFoodNutritionRequest)) {
     throw new Error('요청인자 형식에 맞지 않음');
   }
-  console.log(searchFoodNutritionRequest);
 
   const body = await api.getFoodNutritionComponentDatabaseInquery(
     searchFoodNutritionRequest.foodNameKr,
