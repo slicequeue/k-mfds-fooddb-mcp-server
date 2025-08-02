@@ -29,16 +29,13 @@
     "k-mfds-fooddb-mcp-server": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm --target node18 --outDir dist --external @modelcontextprotocol/sdk --shims",
-    "build:prod": "tsup src/index.ts --format esm --target node18 --outDir dist --external @modelcontextprotocol/sdk --minify --shims",
-    "postbuild": "echo '#!/usr/bin/env node' | cat - dist/index.js > temp && mv temp dist/index.js && chmod +x dist/index.js",
-    "postbuild:prod": "echo '#!/usr/bin/env node' | cat - dist/index.js > temp && mv temp dist/index.js && chmod +x dist/index.js",
+    "build": "tsup",
     "start": "node dist/index.js",
     "dev": "npm run build && npm run start",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "prepublishOnly": "npm run build:prod"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.16.0",
