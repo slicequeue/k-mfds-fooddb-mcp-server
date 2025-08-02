@@ -2,6 +2,7 @@
 
 > **식품의약품안전처(K-MFDS) 식품영양성분DB를 MCP(Model Context Protocol) 도구로 바로 활용!**
 
+[![smithery badge](https://smithery.ai/badge/@slicequeue/k-mfds-fooddb-mcp-server)](https://smithery.ai/server/@slicequeue/k-mfds-fooddb-mcp-server)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)](https://github.com/slicequeue/k-mfds-fooddb-mcp-server)
 [![npm](https://img.shields.io/badge/npm-package-green?style=flat-square&logo=npm)](https://www.npmjs.com/package/k-mfds-fooddb-mcp-server)
 
@@ -119,6 +120,15 @@ npx k-mfds-fooddb-mcp-server
 
 ## 📦 설치 (npm)
 
+### Installing via Smithery
+
+To install k-mfds-fooddb-mcp-server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@slicequeue/k-mfds-fooddb-mcp-server):
+
+```bash
+npx -y @smithery/cli install @slicequeue/k-mfds-fooddb-mcp-server --client claude
+```
+
+### Installing manually
 ```bash
 npm install -g k-mfds-fooddb-mcp-server
 # 또는 프로젝트에 설치
